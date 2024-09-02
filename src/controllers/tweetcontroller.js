@@ -1,5 +1,5 @@
 const parseTweet = require('../utils/parseTweet');
-const { saveTweetData } = require('../models/tweetModel');
+const { saveTweetData } = require('../models/tweetmodel');
 const { executeLuaContract } = require('../services/aoService');
 
 const handleTweetSubmission = async (req, res) => {

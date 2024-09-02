@@ -1,9 +1,11 @@
 const { readFileSync } = require("fs");
+const path = require("path");
 const { message, createDataItemSigner, result } = require("@permaweb/aoconnect");
 
-// 加载钱包文件
-const wallet = JSON.parse(readFileSync("./wallet.json").toString());
+const walletPath = path.join(__dirname, "wallet.json");
 
+// 加载钱包文件
+const wallet = JSON.parse(readFileSync(walletPath).toString());
 // AO 进程 ID
 const AO_PROCESS_ID = "mhlw9Awvp8urkWx_-EHzAFez4U-b9LaNeIbaO6_d79Q";
 
